@@ -101,6 +101,7 @@ precompile-utils = { workspace = true }
 
 # Allfeat precompiles
 pallet-evm-precompile-balances-erc20 = { workspace = true }
+pallet-evm-precompile-artists = { workspace = true }
 
 # Used for the node template's RPCs
 frame-system-rpc-runtime-api = { workspace = true }
@@ -198,7 +199,8 @@ std = [
   "pallet-evm-precompile-blake2/std",
   "pallet-hotfix-sufficients/std",
   "precompile-utils/std",
-  "pallet-evm-precompile-balances-erc20/std"
+  "pallet-evm-precompile-balances-erc20/std",
+  "pallet-evm-precompile-artists/std"
 ]
 runtime-benchmarks = [
   "frame-benchmarking/runtime-benchmarks",
