@@ -223,9 +223,7 @@ dependencies = [
  "pallet-babe",
  "pallet-bags-list",
  "pallet-balances",
- "pallet-base-fee",
  "pallet-conviction-voting",
- "pallet-dynamic-fee",
  "pallet-election-provider-multi-phase",
  "pallet-election-provider-support-benchmarking",
  "pallet-ethereum",
@@ -238,7 +236,6 @@ dependencies = [
  "pallet-evm-precompile-sha3fips",
  "pallet-evm-precompile-simple",
  "pallet-grandpa",
- "pallet-hotfix-sufficients",
  "pallet-identity",
  "pallet-im-online",
  "pallet-mmr",
@@ -3626,8 +3623,6 @@ dependencies = [
  "pallet-babe",
  "pallet-bags-list",
  "pallet-balances",
- "pallet-base-fee",
- "pallet-dynamic-fee",
  "pallet-election-provider-multi-phase",
  "pallet-election-provider-support-benchmarking",
  "pallet-ethereum",
@@ -3643,7 +3638,6 @@ dependencies = [
  "pallet-evm-precompile-sha3fips",
  "pallet-evm-precompile-simple",
  "pallet-grandpa",
- "pallet-hotfix-sufficients",
  "pallet-identity",
  "pallet-im-online",
  "pallet-mmr",
@@ -3670,7 +3664,6 @@ dependencies = [
  "scale-info",
  "sha3",
  "shared-runtime",
- "smallvec",
  "sp-api",
  "sp-arithmetic",
  "sp-authority-discovery",
@@ -5949,20 +5942,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "pallet-base-fee"
-version = "1.0.0"
-source = "git+https://github.com/Allfeat/frontier.git?branch=allfeat-polkadot-v1.9.0#35d49546bbf522e91cf05fa3b94af246703b38ec"
-dependencies = [
- "fp-evm",
- "frame-support",
- "frame-system",
- "parity-scale-codec",
- "scale-info",
- "sp-core",
- "sp-runtime",
-]
-
-[[package]]
 name = "pallet-conviction-voting"
 version = "28.0.0"
 source = "git+https://github.com/Allfeat/polkadot-sdk.git?branch=allfeat-polkadot-v1.9.0#2cd39cc745b74b861bae9f6f474834322ed1a51a"
@@ -5976,22 +5955,6 @@ dependencies = [
  "serde",
  "sp-io",
  "sp-runtime",
- "sp-std 14.0.0 (git+https://github.com/Allfeat/polkadot-sdk.git?branch=allfeat-polkadot-v1.9.0)",
-]
-
-[[package]]
-name = "pallet-dynamic-fee"
-version = "4.0.0-dev"
-source = "git+https://github.com/Allfeat/frontier.git?branch=allfeat-polkadot-v1.9.0#35d49546bbf522e91cf05fa3b94af246703b38ec"
-dependencies = [
- "fp-dynamic-fee",
- "fp-evm",
- "frame-support",
- "frame-system",
- "parity-scale-codec",
- "scale-info",
- "sp-core",
- "sp-inherents",
  "sp-std 14.0.0 (git+https://github.com/Allfeat/polkadot-sdk.git?branch=allfeat-polkadot-v1.9.0)",
 ]
 
@@ -6330,22 +6293,6 @@ dependencies = [
  "sp-runtime",
  "sp-session",
  "sp-staking",
- "sp-std 14.0.0 (git+https://github.com/Allfeat/polkadot-sdk.git?branch=allfeat-polkadot-v1.9.0)",
-]
-
-[[package]]
-name = "pallet-hotfix-sufficients"
-version = "1.0.0"
-source = "git+https://github.com/Allfeat/frontier.git?branch=allfeat-polkadot-v1.9.0#35d49546bbf522e91cf05fa3b94af246703b38ec"
-dependencies = [
- "frame-benchmarking",
- "frame-support",
- "frame-system",
- "pallet-evm",
- "parity-scale-codec",
- "scale-info",
- "sp-core",
- "sp-runtime",
  "sp-std 14.0.0 (git+https://github.com/Allfeat/polkadot-sdk.git?branch=allfeat-polkadot-v1.9.0)",
 ]
 
@@ -9638,10 +9585,28 @@ dependencies = [
  "enumflags2",
  "frame-support",
  "frame-system",
+ "pallet-artists-v2",
+ "pallet-authorship",
+ "pallet-bags-list",
+ "pallet-balances",
+ "pallet-election-provider-multi-phase",
+ "pallet-evm",
  "pallet-identity",
+ "pallet-im-online",
+ "pallet-multisig",
+ "pallet-nomination-pools",
+ "pallet-preimage",
+ "pallet-proxy",
+ "pallet-scheduler",
+ "pallet-session",
+ "pallet-staking",
+ "pallet-sudo",
+ "pallet-timestamp",
  "pallet-transaction-payment",
+ "pallet-utility",
  "parity-scale-codec",
  "scale-info",
+ "smallvec",
  "sp-core",
  "sp-runtime",
  "sp-std 14.0.0 (git+https://github.com/Allfeat/polkadot-sdk.git?branch=allfeat-polkadot-v1.9.0)",

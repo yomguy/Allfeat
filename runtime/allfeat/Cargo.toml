@@ -90,8 +90,6 @@ fp-evm = { workspace = true, features = ["serde"] }
 fp-rpc = { workspace = true }
 fp-self-contained = { workspace = true, features = ["serde"] }
 # Frontier FRAME
-pallet-base-fee = { workspace = true }
-pallet-dynamic-fee = { workspace = true }
 pallet-ethereum = { workspace = true }
 pallet-evm = { workspace = true }
 pallet-evm-precompile-modexp = { workspace = true }
@@ -100,7 +98,6 @@ pallet-evm-precompile-simple = { workspace = true }
 pallet-evm-precompile-bn128 = { workspace = true }
 pallet-evm-precompile-blake2 = { workspace = true }
 pallet-evm-precompile-artists = { workspace = true }
-pallet-hotfix-sufficients = { workspace = true }
 precompile-utils = { workspace = true }
 
 # Allfeat precompiles
@@ -193,8 +190,6 @@ std = [
     "fp-rpc/std",
     "fp-self-contained/std",
     # Frontier FRAME
-    "pallet-base-fee/std",
-    "pallet-dynamic-fee/std",
     "pallet-ethereum/std",
     "pallet-evm/std",
     "pallet-evm-precompile-modexp/std",
@@ -202,13 +197,11 @@ std = [
     "pallet-evm-precompile-simple/std",
     "pallet-evm-precompile-bn128/std",
     "pallet-evm-precompile-blake2/std",
-    "pallet-hotfix-sufficients/std",
     "precompile-utils/std",
     "pallet-evm-precompile-balances-erc20/std",
     "pallet-evm-precompile-artists/std",
 ]
 runtime-benchmarks = [
-    "shared-runtime/runtime-benchmarks",
     "frame-benchmarking/runtime-benchmarks",
     "frame-support/runtime-benchmarks",
     "frame-system/runtime-benchmarks",
@@ -237,14 +230,12 @@ runtime-benchmarks = [
     "frame-system-benchmarking/runtime-benchmarks",
     "pallet-ethereum/runtime-benchmarks",
     "pallet-evm/runtime-benchmarks",
-    "pallet-hotfix-sufficients/runtime-benchmarks",
     "pallet-referenda/runtime-benchmarks",
     "pallet-conviction-voting/runtime-benchmarks",
     "pallet-whitelist/runtime-benchmarks",
     "pallet-vesting/runtime-benchmarks"
 ]
 try-runtime = [
-    "shared-runtime/try-runtime",
     "frame-election-provider-support/try-runtime",
     "frame-executive/try-runtime",
     "frame-try-runtime/try-runtime",
@@ -275,9 +266,6 @@ try-runtime = [
     "pallet-nomination-pools/try-runtime",
     "pallet-evm/try-runtime",
     "pallet-ethereum/try-runtime",
-    "pallet-hotfix-sufficients/try-runtime",
-    "pallet-base-fee/try-runtime",
-    "pallet-dynamic-fee/try-runtime",
     "pallet-conviction-voting/try-runtime",
     "pallet-whitelist/try-runtime",
     "pallet-referenda/try-runtime",
