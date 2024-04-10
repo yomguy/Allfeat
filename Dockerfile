@@ -53,7 +53,7 @@ RUN --mount=type=cache,mode=0755,target=/app/target cargo chef cook --release --
 
 FROM cacher AS builder
 COPY . .
-RUN --mount=type=cache,mode=0755,target=/app/target cargo build --locked --release
+RUN --mount=type=cache,mode=0755,target=/app/target cargo build --locked --profile=production
 RUN --mount=type=cache,mode=0755,target=/app/target cp /app/target/release/allfeat /usr/local/bin
 
 ###########
