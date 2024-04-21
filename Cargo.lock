@@ -120,10 +120,12 @@ dependencies = [
  "fc-rpc",
  "fc-rpc-core",
  "fc-storage",
+ "fp-account",
  "fp-dynamic-fee",
  "fp-rpc",
  "frame-benchmarking",
  "frame-benchmarking-cli",
+ "frame-system",
  "frame-system-rpc-runtime-api",
  "futures",
  "harmonie-runtime",
@@ -133,6 +135,7 @@ dependencies = [
  "log",
  "pallet-im-online",
  "pallet-staking",
+ "pallet-transaction-payment",
  "pallet-transaction-payment-rpc",
  "pallet-transaction-payment-rpc-runtime-api",
  "rand",
@@ -5831,6 +5834,7 @@ name = "pallet-artists-v2"
 version = "1.0.0-dev"
 dependencies = [
  "derive-getters",
+ "enumflags2",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
