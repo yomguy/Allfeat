@@ -262,7 +262,7 @@ fn transfer() {
 					Precompile1,
 					PCall::transfer { to: Address(Bob.into()), value: 400.into() },
 				)
-				.expect_cost(184118756) // 1 weight => 1 gas in mock
+				.expect_cost(172298756) // 1 weight => 1 gas in mock
 				.expect_log(log3(
 					Precompile1,
 					SELECTOR_LOG_TRANSFER,
@@ -307,8 +307,8 @@ fn transfer_not_enough_funds() {
 					PCall::transfer { to: Address(Bob.into()), value: 1400.into() },
 				)
 				.execute_reverts(|output| {
-					from_utf8(&output).unwrap().contains("Dispatched call failed with error: ") &&
-						from_utf8(&output).unwrap().contains("FundsUnavailable")
+					from_utf8(output).unwrap().contains("Dispatched call failed with error: ") &&
+						from_utf8(output).unwrap().contains("FundsUnavailable")
 				});
 		});
 }
@@ -337,7 +337,7 @@ fn transfer_from() {
 						value: 400.into(),
 					},
 				)
-				.expect_cost(184118756) // 1 weight => 1 gas in mock
+				.expect_cost(172298756) // 1 weight => 1 gas in mock
 				.expect_log(log3(
 					Precompile1,
 					SELECTOR_LOG_TRANSFER,
@@ -427,7 +427,7 @@ fn transfer_from_self() {
 						value: 400.into(),
 					},
 				)
-				.expect_cost(184118756) // 1 weight => 1 gas in mock
+				.expect_cost(172298756) // 1 weight => 1 gas in mock
 				.expect_log(log3(
 					Precompile1,
 					SELECTOR_LOG_TRANSFER,
@@ -804,7 +804,7 @@ fn permit_valid() {
 					SELECTOR_LOG_APPROVAL,
 					CryptoAlith,
 					Bob,
-					solidity::encode_event_data(U256::from(value)),
+					solidity::encode_event_data(value),
 				))
 				.execute_returns(());
 
